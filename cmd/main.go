@@ -1,8 +1,13 @@
 package main
 
-import "go-image-comparer/imgCompare"
+import (
+	"go-image-comparer/imgCompare"
+	"log"
+)
 
 func main() {
-	imgCompare.CompareImagesFromDirs("/Users/petem/dev/testRes/dir1", "/Users/petem/dev/testRes/dir2")
-
+	err := imgCompare.CompareImagesFromDirs("F:\\Pictures\\gotst\\dir1", "F:\\Pictures\\gotst\\dir2")
+	if err != nil {
+		log.Fatalf("%v", err)
+	}
 }

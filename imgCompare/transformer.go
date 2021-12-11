@@ -4,7 +4,7 @@ import "image"
 
 // Transformer makes transformations to images including size and colour.
 
-// Takes an image and converts its color to grayscale
+// toGrayscale Takes an image and converts its color to grayscale
 func toGrayscale(img image.Image) image.Image {
 
 	gray := image.NewGray(img.Bounds())
